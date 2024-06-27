@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WakeUp - Login</title>
+    <link rel="stylesheet" href="css/estilos.min.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <form>
+            <div>
+                <label for="form-login-email">Usuario:</label>
+                <input type="text" id="form-login-email" required />
+            </div>
+            <div>
+                <label for="form-login-password">Password:</label>
+                <input type="password" id="form-login-password" required />
+            </div>
+            <input type="button" class="btn btn-primary" id="form-login-submit" value="Login" />
+            <div id="form-login-error" class="error"></div>
+        </form>
+        <a href="register.html">Registrarse</a>
+    </div>
+    <script src='js/login.js' type="module"></script>
+</body>
+
+</html>
