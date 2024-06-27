@@ -27,7 +27,8 @@ const procesarErrores = (error = new Error("Ocurrio un error inesperado")) => {
 }
 export class RequestsAPI {
 
-    static urlBaseBackend = "http://localhost:3000";
+    static urlBaseBackend = "https://wakeup-api.onrender.com";
+    //http://localhost:3000
 
     //post /login
     static login(email, password) {
