@@ -1,5 +1,8 @@
 import { RequestsAPI } from "../RequestsAPI.js";
-import { imprimir, obtenerValorInput } from "../utils/helpers.js";
+import { imprimir, obtenerValorInput, validarSesion } from "../utils/helpers.js";
+
+validarSesion()
+
 
 const botonLogin = document.getElementById("form-login-submit");
 
@@ -13,6 +16,7 @@ botonLogin.addEventListener("click", () => {
     .then((data) => {
            //    si el login es exitoso, lo guardamos en el session storage
            sessionStorage.setItem("session", data.session);
+           sessionStorage.setItem("user", JSON.stringify(data.user));
 
      
            // redirigimos al usaurio al index

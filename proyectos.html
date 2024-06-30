@@ -43,26 +43,26 @@
     <div class="container">
         <a href="login.html" id="boton-logout">Logout</a>
         <div>
-            <a href="nueva-mascota.html">Nueva mascota</a>
+            <a href="nuevo-proyecto.html">Nuevo proyecto</a>
             <h3>Filtros</h3>
+
             <div class="grupo-botones">
                 <div>
-                    <label for="input-filtro-nombre">Nombre</label>
-                    <input type="text" id="input-filtro-nombre" />
+                    <label for="input-filtro-titulo">Titulo</label>
+                    <input type="text" id="input-filtro-titulo" />
                 </div>
                 <div>
-                    <label for="input-filtro-tipo">Tipo</label>
-                    <select id="input-filtro-tipo">
+                    <label for="input-filtro-estado">Estado</label>
+                    <select id="input-filtro-estado">
                         <option value="">Todos</option>
-                        <option value="perro">Perro</option>
-                        <option value="gato">Gato</option>
-                        <option value="conejo">Conejo</option>
-                        <option value="pez">Pez</option>
-                        <option value="otro">Otro</option>
+                        <option value="Sin empezar">Sin empezar</option>
+                        <option value="En progreso">En progreso</option>
+                        <option value="Finalizado">Finalizado</option>
                     </select>
                 </div>
                 <input type="button" id="boton-filtro" value="Filtrar" />
             </div>
+            
             <br>
         </div>
         <div id="listado" class="container-lg d-flex"></div>
