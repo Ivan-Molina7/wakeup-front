@@ -7,3 +7,19 @@ $color-terciario: #fff;
 $fondo-primario: #fff;
 $fondo-terciario: #F0F2F5;
 $fondo-default: black;
+
+
+//States
+$stop: gray;
+$progress: blue;
+$done: green;
+
+//Prioridades
+$low: rgba(0, 128, 0, 0.399);
+$medium: rgba(255, 166, 0, 0.472);
+$high: rgba(255, 0, 0, 0.437);
+
+
+$box-shadow-1: 0 0 5px 0 rgba(0,0,0,0.2);
+//box shador for right sidebar
+$box-shadow-2: 0 0 7px 0 rgba(0,0,0,0.5);

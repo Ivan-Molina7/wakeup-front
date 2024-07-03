@@ -19,7 +19,8 @@ const mostrarDetalle = (data)  => {
         data.titulo, 
         data.descripcion, 
         data.prioridad, 
-        data.estado);
+        data.estado,
+        data.categoria);
      imprimir("detalle", proyecto.mostrarDetalle())
 } 
 

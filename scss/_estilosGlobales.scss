@@ -1,0 +1,31 @@
+
+a{
+    text-decoration: none !important;
+    color: default;
+}
+
+.centrado{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fa-trash, .fa-pen{
+    cursor: pointer !important;
+}
+
+.priority-low{
+    background-color: $low !important;
+}
+
+.priority-medium{
+    background-color: $medium !important;
+}
+
+.priority-high{
+    background-color: $high !important;
+}
+
+/*MODALE BOOTSTRAP*/
+.modal-footer{
+    padding: 0 !important;
+}

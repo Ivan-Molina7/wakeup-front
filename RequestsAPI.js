@@ -15,6 +15,7 @@ const procesarRespuesta = (res) => {
       throw new Error(data?.error);
     }
 
+
     return data;
   });
 };
@@ -47,6 +48,18 @@ export class RequestsAPI {
       .catch(procesarErrores);
   }
 
+
+  static obtenerUsuario(idUsuario) {
+  
+
+    return fetch(obtenerUrl(`usuarios?idUsuario=` + idUsuario.filtroIdUsuario ), {
+      method: "GET",
+      headers,
+    })
+      .then(procesarRespuesta)
+      .catch(procesarErrores);
+  }
+
   static obtenerProyectos(opciones = {}) {
     const queryParams = new URLSearchParams({});
 
@@ -60,6 +73,14 @@ export class RequestsAPI {
 
     if (opciones.filtroEstado) {
       queryParams.set("estado", opciones.filtroEstado);
+    }
+
+    if (opciones.filtroCategoria) {
+      queryParams.set("categoria", opciones.filtroCategoria);
+    }
+
+    if (opciones.filtroIdUsuario) {
+      queryParams.set("idUsuario", opciones.filtroIdUsuario);
     }
 
     return fetch(obtenerUrl("proyectos?" + queryParams), {

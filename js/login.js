@@ -16,9 +16,8 @@ botonLogin.addEventListener("click", () => {
     .then((data) => {
            //    si el login es exitoso, lo guardamos en el session storage
            sessionStorage.setItem("session", data.session);
-           sessionStorage.setItem("user", JSON.stringify(data.user));
+           sessionStorage.setItem("user", JSON.stringify(data.user).trim().replace(/^"|"$/g, ''));
 
-     
            // redirigimos al usaurio al index
            document.location.replace("proyectos.html");
     })

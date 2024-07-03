@@ -16,6 +16,8 @@ const popularCampos = (data) => {
   document.querySelector("#editar-descripcion").value = data.descripcion;
   document.querySelector("#editar-prioridad").value = data.prioridad;
   document.querySelector("#editar-estado").value = data.estado;
+  document.querySelector("#editar-categoria").value = data.categoria;
+  
 };
 
 RequestsAPI.obtenerProyecto(idProyecto)
@@ -31,13 +33,14 @@ document
     const descripcion = obtenerValorInput("editar-descripcion");
     const prioridad = obtenerValorInput("editar-prioridad");
     const estado = obtenerValorInput("editar-estado");
+    const categoria = obtenerValorInput("editar-categoria");
 
-    if (!titulo || !descripcion || !prioridad || !estado) {
+    if (!titulo || !descripcion || !prioridad || !estado || !categoria ) {
       imprimir("editar-proyecto-error", "Por favor, rellene todos los campos");
       return;
     }
 
-    const body = JSON.stringify({ titulo, descripcion, prioridad, estado });
+    const body = JSON.stringify({ titulo, descripcion, prioridad, estado, categoria });
 
     RequestsAPI.putProyecto(idProyecto, body)
       .then(() => {
