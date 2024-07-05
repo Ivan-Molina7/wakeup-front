@@ -4,7 +4,6 @@ import { imprimir, obtenerValorInput, validarSesion } from "../utils/helpers.js"
 
 validarSesion()
 
-
 // obtenemos el id del proyecto
 const params = new URLSearchParams(window.location.search)
 const idProyecto = params.get("id");
