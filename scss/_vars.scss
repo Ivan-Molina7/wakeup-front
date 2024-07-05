@@ -1,25 +1,71 @@
 /*Colores*/
+/*#4129f4;
+e79fff*/
+// Variables de color
+$color-principal: #0b9831;
+$color-principal-hover: #09772a;
 
-$color-principal: #1e90cf;
 $color-secundario: #1d1d1b;
+$color-secundario-hover: #333331;
+
 $color-terciario: #fff;
+$color-terciario-hover: #e6e6e6;
+
+$color-eliminar: #b23c3c; // Rojo para eliminar
+$color-eliminar-hover: #a30404; // Rojo para eliminar
 
 $fondo-primario: #fff;
+$fondo-secundario: #c8fdd8;
 $fondo-terciario: #F0F2F5;
-$fondo-default: black;
 
 
-//States
-$stop: gray;
-$progress: blue;
-$done: green;
+
+$color-muted: #6c757d;
+
 
 //Prioridades
-$low: rgba(0, 128, 0, 0.399);
-$medium: rgba(255, 166, 0, 0.472);
-$high: rgba(255, 0, 0, 0.437);
+$low: rgba(76, 175, 79, 0.859); // Verde suave
+$medium: rgba(197, 120, 5, 0.691); // Naranja brillante
+$high: rgba(211, 47, 47, 0.8); // Rojo intenso
 
 
-$box-shadow-1: 0 0 5px 0 rgba(0,0,0,0.2);
+
+//Estados
+$sin-empezar: #878787b4; // Gris medio
+$en-progreso: rgba(17, 43, 243, 0.7); // Azul claro
+$terminado: rgba(16, 144, 20, 0.8);
+; // Verde claro
+
+$box-shadow-1: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 //box shador for right sidebar
-$box-shadow-2: 0 0 7px 0 rgba(0,0,0,0.5);
+$box-shadow-2: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+
+$transition-1: all 0.3s ease-in-out;
+
+.btn {
+
+    border: none !important;
+}
+
+.btn-primary {
+    color: white !important;
+    background-color: $color-principal !important;
+}
+
+.btn-primary:hover {
+    background-color: $color-principal-hover !important;
+}
+
+.btn-primary-active{
+    background-color: $color-principal-hover !important;
+}
+
+
+
+.action-red {
+    background-color: $color-eliminar !important;
+}
+
+.action-red:hover {
+    background-color: $color-eliminar-hover !important;
+}

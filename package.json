@@ -6,12 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "buildCSS": "sass scss/estilos.scss css/estilos.min.css --style compressed",
-    "watchCSS": "sass --watch scss/estilos.scss css/estilos.min.css"
+    "watchCSS": "sass --watch scss/estilos.scss css/estilos.min.css",
+    "copyHTML": "cpx \"*.html\" dist",
+    "copyAssets": "cpx \"images/**\" dist/images",
+    "copyJsSources": "cpx \"js/**\" dist/js",
+    "copyJs": "cpx \"*.js\" dist",
+    "copyUtils": "cpx \"utils/**\" dist/utils",
+    "copyModels": "cpx \"models/**\" dist/models",
+    "build": "npm run buildCSS && npm run copyHTML && npm run copyAssets && npm run copyJsSources && npm run copyJs && npm run copyUtils && npm run copyModels && mkdir dist\\css 2> nul && cp css\\estilos.min.css dist\\css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "cpx": "^1.5.0",
     "sass": "^1.77.6"
   }
 }

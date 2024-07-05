@@ -13,6 +13,8 @@ a{
     cursor: pointer !important;
 }
 
+
+
 .priority-low{
     background-color: $low !important;
 }
@@ -25,7 +27,90 @@ a{
     background-color: $high !important;
 }
 
+.state-sin-empezar{
+    background-color: $sin-empezar !important;
+}
+
+.state-en-progreso{
+    background-color: $en-progreso !important;
+}
+
+.state-finalizado{
+    background-color: $terminado !important;
+}
+
+.logo-md{
+    height: 80px;
+    width: 250px;
+    object-fit: contain;
+    
+}
+
+.logo-xl{
+    height: 120px;
+    
+}
+
+.logo-home{
+    height: 400px !important;
+    width: 400px !important;
+    object-fit: contain;
+    
+}
+
+.icon-home{
+    color: $color-principal !important;
+}
+
+
+
 /*MODALE BOOTSTRAP*/
 .modal-footer{
-    padding: 0 !important;
+    padding: 1em 0 0 0 !important;
 }
+
+#dropdownUser{
+    color: $color-principal;
+}
+
+.modal label{
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    h1 {
+      font-size: 32px !important;
+    }
+  
+    h2 {
+      font-size: 28px  !important;
+    }
+  
+    h3 {
+      font-size: 24px !important;
+    }
+  
+    h4 {
+      font-size: 18px !important;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    h1 {
+      font-size: 28px !important;
+    }
+  
+    h2 {
+      font-size: 24px !important;
+    }
+  
+    h3 {
+      font-size: 20px !important;
+    }
+  
+    h4 {
+      font-size: 16px !important;
+    }
+  }

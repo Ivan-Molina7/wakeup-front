@@ -1,0 +1,65 @@
+.header-home {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: auto;
+    width: 100% !important;
+    box-shadow: $box-shadow-2;
+    background-color: white;
+
+    .header-main {
+        height: 100px;
+        /* Altura de la barra de navegación */
+        width: 100% !important;
+
+        /* Estilos para el texto dentro de .header-main */
+        .navbar-brand {
+            font-size: 2.5rem;
+            color: black !important;
+            /* Tamaño de fuente del logo */
+        }
+        .navbar-toggler{
+            background-color: $color-principal;
+        }
+
+        .navbar-toggler-icon {
+            background-color: $color-principal;
+            color: white !important;
+        }
+    }
+
+
+
+
+
+
+
+}
+
+#hero{
+    background: linear-gradient(to right, #064f1c ,$color-principal-hover);
+    box-shadow: $box-shadow-2;
+}
+
+
+@media (max-width: 767px) {
+
+
+        .navbar-collapse ul {
+            padding: 2rem 1.5rem;
+            
+            li *{
+                color: white !important;
+            }
+        }
+
+        .menu-custom--home {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            background-color: $color-principal-hover;
+            z-index: 777;
+        }
+    
+}

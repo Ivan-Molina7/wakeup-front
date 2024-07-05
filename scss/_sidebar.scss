@@ -1,62 +1,121 @@
-.sidebar{
-    min-width: 160px !important;
-    transition:  0.3s ease-in-out;
-    position: relative;
-    box-shadow: $box-shadow-2; ;
-    color: $color-terciario !important;
-    background-color: $color-principal;
-    min-height: 100vh !important;
+.sidebar {
+  z-index: 2000;
+  min-width: 160px !important;
+  transition: 0.3s ease-in-out;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: auto; /* Ajustar altura máxima a la altura de la ventana */
+  color: $color-terciario !important;
+  background-color: $color-principal;
+ 
+  box-shadow: $box-shadow-2;
+  min-height: 0; /* Ajustar mínima altura */
+  padding: 16px 2px 16px 16px;
+
+  ::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de scroll */
+    padding-right: 4px !important;
+  }
+  
+  /* Track (fondo de la barra de scroll) */
+  ::-webkit-scrollbar-track {
+    background: $color-principal-hover; /* Color de fondo */
+  }
+  
+  /* Thumb (la parte deslizante de la barra) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* Color del thumb */
+    border-radius: 4px; /* Borde redondeado */
+  }
+  
+  /* Thumb al pasar el mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del thumb al pasar el mouse */
+  }
 }
 
-.sidebar li *, button{
-
-  color: $color-terciario !important
-
-
+.sidebar li *,
+button {
+  color: $color-terciario !important;
 }
 
 .menu-btn {
-    display: block;
-    z-index: 1000;
-    width: auto;
-    position: absolute;
+  display: block;
+  z-index: 1500;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  right: -35px;
+  border: none;
+  padding: 1rem 1rem 1rem 1.5rem;
+  border-radius: 2px;
+  text-align: end;
+  background-color: $color-principal;
+}
 
-    top: 50%;
-    right: -20px;
-  
-    border: none;
-    padding: 1rem 0;
-    padding-right: 10px ;
-    border-radius: 2px;
-    text-align: end;
+.btn-proyectos-sidebar{
+  text-align: left;
 }
 
 @media screen and (min-width: 992px) {
-    .menu-btn{
-        display: none;
-    }
+  .menu-btn {
+      display: none;
+  }
 }
 
 @media (max-width: 992px) {
-    .sidebar {
+  .sidebar {
       position: fixed;
       top: 0;
       left: -270px; /* Fuera de la vista */
       width: 280px; /* Ajustar al ancho del sidebar */
       height: 100%;
       z-index: 1040; /* Para estar encima del contenido */
- 
+  }
 
-    }
-
-    .sidebar.active {
+  .sidebar.active {
       transform: translateX(0); /* Mostrar el sidebar */
       left: 0; /* Fuera de la vista */
       width: 280px; /* Ajustar al ancho del sidebar */
       height: 100%;
-      z-index: 1040; /* Para estar encima del contenido */
-    }
-
-  
+      z-index: 1000; /* Para estar encima del contenido */
   }
+}
 
+.proyecto__title-sidebar {
+  padding-left: 1.5em;
+  width: 75%;
+  height: 25px;
+  overflow: hidden;
+  display: inline-flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+
+.i-sidebar {
+  font-size: .3em;
+}
+
+.i-sidebar--lg {
+  font-size: .8em;
+  transition: $transition-1;
+}
+
+.i-rotated {
+  transform: rotate(180deg) !important;
+}
+
+.sidebar__lista-main {
+  /* Ajuste para mantener el contenido dentro de la barra lateral */
+ /* Ajustar según sea necesario */
+  overflow-y: auto; /* Para activar scroll si el contenido es demasiado largo */
+  padding-right: 16px;
+
+}
+
+.sidebar-social {
+  align-self: flex-end; /* Alinea al final del contenedor */
+  margin-top: auto; /* Empuja hacia el final del contenedor */
+  margin-bottom: 0 !important;
+}

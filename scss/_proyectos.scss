@@ -1,19 +1,42 @@
 .container-right {}
 
+
+.icon-search{
+
+}
+
+.icon-search:hover{
+  cursor: pointer;
+  color: $color-principal-hover;
+}
+
 .user-name p {
   margin: 0;
 }
 
 .card-container {
   min-height: 290px !important;
+ 
 }
+
+
+.card-container:hover  .card-body{
+  background-color: rgba(249, 245, 245, 0.606) !important;
+}
+
+.card-container:hover .card-footer{
+  background-color: rgba(203, 203, 203, 0.482) !important;
+}
+
 
 .card-custom {
   min-height: 290px;
 
 
-  .card-body {
 
+  .card-body {
+    cursor: pointer;
+    transition: $transition-1;
 
     .card-custom-image {
       width: 100%;
@@ -25,13 +48,13 @@
 
     .card-title {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: start;
       gap: 9px;
 
       /* Hacer medio query max width 992 y sacar esto*/
-      max-height: 70px !important;
-      height: 70px;
+      max-height: 50px !important;
+      height: 50px;
       overflow: hidden;
 
       i {
@@ -43,10 +66,10 @@
     }
 
     .card-tag {
-      color: $color-secundario !important;
+      color: $color-terciario !important;
       background-color: rgba(0, 128, 0, 0.356);
       width: max-content;
-      padding: 2px 8px;
+      padding: 4px 8px;
       border-radius: 5px;
       font-size: 12px;
 
@@ -57,6 +80,10 @@
       height: 70px;
       overflow: hidden;
     }
+  }
+
+  .card-footer{
+    transition: $transition-1;
   }
 }
 
@@ -71,18 +98,26 @@
 }
 
 
-.btn--filter {
 
+
+.btn--filter {
   cursor: pointer;
   transition: all 0.2s ease;
+  background: unset !important;
+}
+
+
+.btn--filter:hover {
+  background-color: $color-principal !important;
 }
 
 
 .btn--filter.active {
-  background-color: $color-principal;
+  background-color: $color-principal !important;
   color: #fff;
 }
 
-#nuevo-proyecto-error{
-  display: none !important;
+#nuevo-proyecto-error, #editar-proyecto-error, #eliminar-proyecto-error, #form-login-error, #form-register-error{
+  display: none;
+  color: #fff;
 }

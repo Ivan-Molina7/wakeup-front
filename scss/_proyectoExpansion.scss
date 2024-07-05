@@ -1,0 +1,68 @@
+.proyecto__thumbnail{
+    height: 25vh;
+    width: 100%;
+    box-shadow: $box-shadow-2;
+
+    .proyecto__image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Clase para el contenedor del proyecto */
+.proyecto-container {
+  
+  }
+  
+  /* Clase para el título principal del proyecto */
+  .proyecto__titles {
+  
+  }
+  
+  /* Clase para el título del proyecto */
+  .proyecto__title {
+  
+  }
+  
+  /* Clase para el icono de opciones del título del proyecto */
+  .proyecto__title-icon {
+    font-size: 2rem;
+    color: $color-muted;
+    cursor: pointer;
+    transition: $transition-1;
+
+    &:hover{
+      color: $color-principal;
+    }
+  }
+  
+.proyecto__details-container{
+  align-items: center;
+  p{
+    margin: 0;
+  }
+}
+
+  .proyecto__details {
+    
+  }
+
+  .proyecto__detail {
+
+   width: 100px;
+
+ 
+  }
+
+  .proyecto__detail-dinamico p{
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: $color-terciario !important;
+  }
+  
+  /* Clase para la descripción del proyecto */
+  .proyecto__description {
+  
+  }
+  
